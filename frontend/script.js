@@ -915,12 +915,15 @@ function setupDashboardReports() {
               minute: '2-digit',
               hour12: true
             });
+            const actionLink = row.pdf_url 
+              ? `<a href="${row.pdf_url}" target="_blank" rel="noopener" class="view-link">View</a>` 
+              : `<span class="processing-text">Generating...</span>`;
             return `
         <tr>
           <td>${row.test_type || "-"}</td>
           <td>${formattedDate}</td>
-          <td><span class="badge">${row.label || "-"}</span></td>
-          <td>${row.pdf_url ? `<a href="${row.pdf_url}" target="_blank" rel="noopener">View</a>` : "-"}</td>
+          <td><span class="badge ${row.label?.toLowerCase().includes('high') ? 'risk-high' : 'risk-low'}">${row.label || "-"}</span></td>
+          <td>${actionLink}</td>
         </tr>`;
           }
         )
