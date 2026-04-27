@@ -25,6 +25,7 @@ class StorageService:
         import cloudinary
         import cloudinary.utils
         import cloudinary.uploader
+        from app.core.logging import logger
 
         cloudinary.config(
             cloud_name=settings.cloudinary_cloud_name,
@@ -35,13 +36,12 @@ class StorageService:
 
         path = Path(file_path)
         try:
-            # Use resource_type="image" for PDFs to enable better delivery features in Cloudinary.
-            # We also set the format explicitly to 'pdf'.
-            logger.info("uploading_to_cloudinary", extra={"file": str(path)})
+            # Revert to resource_type="auto" for maximum compatibility across all Cloudinary account types.
+            # "auto" will detect PDF and usually treat it as a 'raw' or 'image' resource depending on settings.
+            logger.info(f"Uploading file to Cloudinary: {path.name}")
             response: dict[str, Any] = cloudinary.uploader.upload(
                 str(path),
-                resource_type="image",
-                format="pdf",
+                resource_type="auto",
                 access_mode="public",
                 folder=settings.cloudinary_folder,
                 use_filename=True,
@@ -49,14 +49,19 @@ class StorageService:
                 overwrite=True,
             )
             secure_url = response.get("secure_url")
-            if not isinstance(secure_url, str) or not secure_url:
-                logger.error("cloudinary_upload_no_url", extra={"response": response})
-                raise RuntimeError("Cloudinary upload did not return a secure URL")
             
-            logger.info("cloudinary_upload_success", extra={"url": secure_url})
+            # Fallback: if secure_url is missing, try url
+            if not secure_url:
+                secure_url = response.get("url")
+
+            if not isinstance(secure_url, str) or not secure_url:
+                logger.error(f"Cloudinary upload failed to return URL. Response: {response}")
+                raise RuntimeError("Cloudinary upload did not return a valid URL")
+            
+            logger.info(f"Cloudinary upload successful: {secure_url}")
             return secure_url
         except Exception as e:
-            logger.exception("cloudinary_upload_failed", extra={"error": str(e)})
+            logger.error(f"Cloudinary upload exception: {str(e)}")
             raise RuntimeError(f"Cloudinary upload failed: {str(e)}") from e
         finally:
             try:

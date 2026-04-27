@@ -316,25 +316,32 @@ def get_feature_importance(test_type: str) -> dict[str, Any]:
 
 
 def process_prediction_report(prediction_id: int) -> None:
+    logger.info(f"Starting background report processing for prediction {prediction_id}")
     try:
         with session_scope() as db:
             repo = PredictionRepository(db)
             prediction_row = repo.get_prediction_by_id(prediction_id)
             if prediction_row is None:
-                logger.warning("prediction_missing_for_report", extra={"prediction_id": prediction_id})
+                logger.warning(f"Prediction {prediction_id} not found in database for background task")
                 return
+            
+            logger.info(f"Generating PDF for {prediction_row.test_type} (ID: {prediction_id})")
             pdf_url = ReportService().generate_and_upload(prediction_row)
+            
+            logger.info(f"Saving PDF URL to database: {pdf_url}")
             repo.update_report_url(prediction_id, pdf_url)
+            
             try:
+                logger.info(f"Sending report email to {prediction_row.user_email}")
                 EmailService().send_report_email(
                     to_email=prediction_row.user_email,
                     test_type=prediction_row.test_type,
                     pdf_url=pdf_url,
                 )
-            except Exception:
-                logger.exception("report_email_failed", extra={"prediction_id": prediction_id})
-    except Exception:
-        logger.exception("report_background_task_failed", extra={"prediction_id": prediction_id})
+            except Exception as e:
+                logger.error(f"Failed to send report email for prediction {prediction_id}: {str(e)}")
+    except Exception as e:
+        logger.error(f"Critical error in background report processing for {prediction_id}: {str(e)}")
 
 
 class PredictionService:
