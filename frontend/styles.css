@@ -144,21 +144,21 @@ img {
 }
 
 .dashboard .sidebar .logo-text .su {
-  color: var(--primary);
+  color: #ffffff;
 }
 
 .dashboard .sidebar .logo-text .swastha {
-  color: #ffffff;
-  background: var(--primary);
+  color: var(--primary);
+  background: #ffffff;
 }
 
 .module-header .logo-text .su {
-  color: var(--primary);
+  color: #ffffff;
 }
 
 .module-header .logo-text .swastha {
-  color: #ffffff;
-  background: var(--primary);
+  color: var(--primary);
+  background: #ffffff;
 }
 
 .top-bar .nav-links a {

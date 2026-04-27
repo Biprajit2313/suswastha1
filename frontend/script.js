@@ -884,8 +884,14 @@ function setupDashboardReports() {
   const lastStatusEl = document.getElementById("dashboard-last-status");
 
   const loadReports = async () => {
-    try {
-      const response = await fetch(`${FASTAPI_BASE}/api/user/reports`, { headers: buildAuthHeaders() });
+  try {
+    // Proactively sync reports to bring back any missing ones
+    fetch(`${FASTAPI_BASE}/api/user/reports/sync`, { 
+      method: 'POST',
+      headers: buildAuthHeaders() 
+    }).catch(err => console.error("Sync failed:", err));
+
+    const response = await fetch(`${FASTAPI_BASE}/api/user/reports`, { headers: buildAuthHeaders() });
       if (!response.ok) throw new Error(`Failed to load reports (${response.status})`);
       const data = await response.json();
       if (!Array.isArray(data) || data.length === 0) {

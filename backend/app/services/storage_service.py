@@ -25,7 +25,8 @@ class StorageService:
         import cloudinary
         import cloudinary.utils
         import cloudinary.uploader
-        from app.core.logging import logger
+        from app.core.logging import get_logger
+        logger = get_logger(__name__)
 
         cloudinary.config(
             cloud_name=settings.cloudinary_cloud_name,
