@@ -1,0 +1,27 @@
+<svg width="420" height="520" viewBox="0 0 420 520" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A8A8"/>
+      <stop offset="100%" stop-color="#0A66C2"/>
+    </linearGradient>
+  </defs>
+  <!-- Circle -->
+  <circle cx="210" cy="180" r="140" fill="none" stroke="url(#grad)" stroke-width="14"/>
+  <!-- H LETTER (solid, clean) -->
+  <g fill="url(#grad)">
+    <!-- Left pillar -->
+    <rect x="150" y="110" width="40" height="180" rx="20"/>
+    <!-- Right pillar -->
+    <rect x="230" y="110" width="40" height="180" rx="20"/>
+    <!-- Middle bar -->
+    <rect x="150" y="170" width="120" height="40" rx="20"/>
+  </g>
+  <!-- HEARTBEAT (FULLY INSIDE CIRCLE) -->
+  <polyline points=" 170,190 185,190 195,170 210,230 225,180 240,200 255,200 " stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Brand Name -->
+  <text x="70" y="470" font-family="Poppins, Arial, sans-serif" font-size="52" font-weight="600" fill="#00A8A8">sus</text>
+  <text x="150" y="470" font-family="Poppins, Arial, sans-serif" font-size="52" font-weight="600" fill="#0A66C2">wastha</text>
+  <!-- Tagline -->
+  <text x="30" y="505" font-family="Arial, sans-serif" font-size="14" letter-spacing="2" fill="#0A66C2">DIAGNOSTICS. INSIGHTS. BETTER HEALTH</text>
+</svg>

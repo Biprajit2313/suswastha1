@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="module-page">
+    <header class="module-header">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="SuSwastha Logo" class="logo-img">
+        <span>SuSwastha</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tests.html">Health Tests</a>
+        <a href="reports.html">Reports</a>
+        <a href="report-history.html">History</a>
+        <a href="contact-about.html">Contact</a>
+      </nav>
+      <div class="module-actions">
+        <a class="btn ghost" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="module-content reports-layout">
+      <section class="module-hero">
+        <div>
+          <p class="eyebrow">My Account</p>
+          <h1>Profile & Medical Reports</h1>
+          <p class="lead">Logged in email: <strong id="profile-email">-</strong></p>
+        </div>
+      </section>
+
+      <section class="history-table">
+        <h3>My Test Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Test</th>
+              <th>Result</th>
+              <th>Date</th>
+              <th>PDF</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody id="profile-reports-body">
+            <tr><td colspan="5">No reports yet.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="callout">
+        <p class="eyebrow">Health Suggestions</p>
+        <ul id="profile-suggestions">
+          <li>No disease-specific suggestions yet.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="profile.js"></script>
+  </body>
+</html>

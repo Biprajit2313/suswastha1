@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate Report | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="module-page">
+    <header class="module-header">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.svg" alt="SuSwastha Logo" class="logo-img">
+        <div class="logo-text"><span class="su">Su</span><span class="swastha">Swastha</span></div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tests.html">Health Tests</a>
+        <a href="reports.html">Reports</a>
+        <a href="report-history.html">History</a>
+        <a href="contact-about.html">Contact</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="module-actions">
+        <a class="btn ghost" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="module-content reports-layout">
+      <section class="module-hero">
+        <div>
+          <p class="eyebrow">Reports Module</p>
+          <h1>Create share-ready medical summaries</h1>
+          <p class="lead">
+            Capture vital signs, lab values, and clinician notes in one place.
+            Generate PDF-ready summaries to share with doctors or caregivers.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#generator">Start Report</a>
+            <a class="btn ghost" href="report-history.html">View History</a>
+          </div>
+        </div>
+        <img
+          src="https://plus.unsplash.com/premium_photo-1726769176212-1ab1fd60f42a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVkaWNhbCUyMHJlcG9ydHN8ZW58MHx8MHx8fDA%3D"
+          alt="Physician reviewing generated reports"
+        />
+      </section>
+
+      <section id="generator" class="reports-grid">
+        <article class="report-card">
+          <h3>Generate Report</h3>
+          <form id="report-generator" class="report-form">
+            <label>
+              Full name
+              <input type="text" name="name" placeholder="Priya Sharma" required />
+            </label>
+            <label>
+              Email / ID
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Test
+              <select name="test">
+                <option>Diabetes Panel</option>
+                <option>Blood Pressure</option>
+                <option>Liver Function</option>
+                <option>Cholesterol</option>
+                <option>Kidney Function</option>
+                <option>Thyroid Function</option>
+                <option>Heart Disease</option>
+              </select>
+            </label>
+            <label>
+              Test date
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              Key metrics (comma separated)
+              <textarea
+                name="metrics"
+                rows="3"
+                placeholder="Glucose: 100 mg/dL, HDL: 55 mg/dL"
+              ></textarea>
+            </label>
+            <label>
+              Notes for clinician
+              <textarea
+                name="notes"
+                rows="4"
+                placeholder="Mention symptoms, context, or follow-ups"
+              ></textarea>
+            </label>
+            <button type="submit" class="btn primary">Generate report</button>
+          </form>
+        </article>
+        <article class="report-card">
+          <h3>Results preview</h3>
+          <div class="output-box" data-report-output>
+            <p>
+              Fill out the form to see your summary here. We’ll auto-populate
+              highlights, lifestyle nudges, and medical disclaimers.
+            </p>
+          </div>
+          <button class="btn primary" type="button" data-download-pdf>
+            Download as PDF
+          </button>
+          <p class="muted">
+            PDF export uses your browser’s print-to-PDF flow for instant
+            downloads.
+          </p>
+        </article>
+      </section>
+
+      <section class="history-table">
+        <h3>Recent exports</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Test</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Heart Disease</td>
+              <td>Nov 20, 2025</td>
+              <td>Shared with cardiologist</td>
+              <td><a href="report-history.html">Open</a></td>
+            </tr>
+            <tr>
+              <td>Kidney Function</td>
+              <td>Nov 08, 2025</td>
+              <td>Awaiting review</td>
+              <td><a href="#">Download</a></td>
+            </tr>
+            <tr>
+              <td>Diabetes Panel</td>
+              <td>Oct 28, 2025</td>
+              <td>Archived</td>
+              <td><a href="#">Download</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+

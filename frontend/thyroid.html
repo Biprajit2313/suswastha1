@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thyroid Checker | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="module-page">
+    <header class="module-header">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="SuSwastha Logo" class="logo-img">
+        <span>SuSwastha</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tests.html">Health Tests</a>
+        <a href="reports.html">Reports</a>
+        <a href="report-history.html">History</a>
+        <a href="contact-about.html">Contact</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="module-actions">
+        <a class="btn ghost" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="test-main">
+      <section class="test-info">
+        <a class="back-link" href="tests.html">← Back to Test Options</a>
+        <p class="eyebrow">Thyroid Function</p>
+        <h1>Screen for hypo or hyperthyroid patterns</h1>
+        <p>
+          Combine hormone tests, medication status, and pregnancy/goitre markers
+          to interpret thyroid health and get treatment suggestions.
+        </p>
+        <img
+          src="https://plus.unsplash.com/premium_photo-1663047254383-0e4d7aa779bb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Endocrinologist reviewing thyroid labs"
+        />
+      </section>
+      <section class="test-form-card">
+        <h2>Input your values</h2>
+        <form class="test-form">
+          <label>Age <input type="number" placeholder="e.g., 31" /></label>
+          <label>
+            Sex
+            <select>
+              <option>Female</option>
+              <option>Male</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>TSH <input type="number" step="0.01" placeholder="e.g., 2.3" /></label>
+          <label>T3 <input type="number" step="0.01" placeholder="e.g., 1.2" /></label>
+          <label>T4 <input type="number" step="0.01" placeholder="e.g., 8.5" /></label>
+          <label>
+            Free T4 Index
+            <input type="number" step="0.1" placeholder="e.g., 2.4" />
+          </label>
+          <label>
+            Free T3 Index
+            <input type="number" step="0.1" placeholder="e.g., 3.1" />
+          </label>
+          <label>
+            Thyroid medication status
+            <select>
+              <option>Not on medication</option>
+              <option>Levothyroxine</option>
+              <option>Anti-thyroid drugs</option>
+            </select>
+          </label>
+          <label>
+            Pregnant
+            <select>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </label>
+          <label>
+            Goitre
+            <select>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </label>
+          <button type="submit" class="btn primary">Run Prediction</button>
+        </form>
+        <div class="output-box">
+          <h3>Results preview</h3>
+          <p>Status: Normal / Hypothyroid / Hyperthyroid</p>
+          <p>Treatment suggestion: Adjust meds, endocrinologist consult, labs.</p>
+        </div>
+      </section>
+    </main>
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+

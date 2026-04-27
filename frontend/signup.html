@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-layout">
+    <section class="auth-visual">
+      <h1>Join SuSwastha</h1>
+      <p>
+        Centralize your health tests, get AI-driven insights, and share reports
+        securely with your physician.
+      </p>
+      <img
+        src="https://media.istockphoto.com/id/455237505/photo/doctor-holding-heart.jpg?s=612x612&w=0&k=20&c=Cnb5Loe7gAB49NX6lerlWgQZQYJYO2DZz_xrtX5czck="
+        alt="Healthcare team guiding a patient through onboarding"
+      />
+    </section>
+
+    <section class="auth-panel">
+      <a href="index.html" class="btn ghost">← Back to Home</a>
+      <div>
+        <p class="eyebrow">Create account</p>
+        <h2>Start monitoring your health</h2>
+      </div>
+
+      <form id="signup-form">
+        <label>
+          Full name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Date of Birth
+          <input type="date" name="dob" required />
+        </label>
+
+        <label>
+          Password
+          <input type="password" name="password" required />
+        </label>
+
+        <button type="button" class="btn ghost" id="send-signup-otp">Send OTP</button>
+
+        <label>
+          Enter OTP
+          <input type="text" name="otp" maxlength="6" inputmode="numeric" required />
+        </label>
+
+        <p class="muted" id="signup-error" style="min-height: 20px"></p>
+
+        <button type="submit" class="btn primary">Verify OTP & Sign Up</button>
+      </form>
+
+      <p>
+        Already have an account?
+        <a href="login.html">Login</a>
+      </p>
+    </section>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

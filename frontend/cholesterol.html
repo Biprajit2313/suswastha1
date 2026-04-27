@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cholesterol Checker | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="module-page">
+    <header class="module-header">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="SuSwastha Logo" class="logo-img">
+        <span>SuSwastha</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tests.html">Health Tests</a>
+        <a href="reports.html">Reports</a>
+        <a href="report-history.html">History</a>
+        <a href="contact-about.html">Contact</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="module-actions">
+        <a class="btn ghost" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="test-main">
+      <section class="test-info">
+        <a class="back-link" href="tests.html">← Back to Test Options</a>
+        <p class="eyebrow">Lipid Profile</p>
+        <h1>Track cholesterol and heart risk factors</h1>
+        <p>
+          Combine your recent lipid panel with demographic and lifestyle
+          information to understand the impact on cardiovascular risk.
+        </p>
+        <img
+          src="https://media.istockphoto.com/id/1337678818/photo/blood-sample-isolated-for-cholinesterase-test-close-view.webp?a=1&b=1&s=612x612&w=0&k=20&c=EH4xmBsmrYnrSh0gZJIE-UlttRVlfhd4ouvmsl490fM="
+          alt="Lab technician reviewing lipid panel results"
+        />
+      </section>
+      <section class="test-form-card">
+        <h2>Input your values</h2>
+        <form class="test-form">
+          <label>
+            Total Cholesterol (mg/dL)
+            <input type="number" placeholder="e.g., 210" />
+          </label>
+          <label>
+            HDL (mg/dL)
+            <input type="number" placeholder="e.g., 55" />
+          </label>
+          <label>
+            LDL (mg/dL)
+            <input type="number" placeholder="e.g., 120" />
+          </label>
+          <label>
+            Triglycerides (mg/dL)
+            <input type="number" placeholder="e.g., 150" />
+          </label>
+          <label>Age <input type="number" placeholder="e.g., 42" /></label>
+          <label>BMI <input type="number" step="0.1" placeholder="26.3" /></label>
+          <label>
+            Blood Pressure (mm Hg)
+            <input type="number" placeholder="e.g., 118" />
+          </label>
+          <label>
+            Smoking Status
+            <select>
+              <option>Non-smoker</option>
+              <option>Former smoker</option>
+              <option>Current smoker</option>
+            </select>
+          </label>
+          <label>
+            Family History of Heart Disease
+            <select>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </label>
+          <button type="submit" class="btn primary">Run Prediction</button>
+        </form>
+        <div class="output-box">
+          <h3>Results preview</h3>
+          <p>Classification: Normal / Borderline / High</p>
+          <p>Heart risk factor: Minimal / Moderate / Elevated</p>
+          <p>Tips: Fiber-rich meals, cardio 150 min/week, follow-up labs.</p>
+        </div>
+      </section>
+    </main>
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
