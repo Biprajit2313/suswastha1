@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Doctor | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="module-page">
+    <header class="module-header">
+      <div class="logo">SuSwastha</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tests.html">Health Tests</a>
+        <a href="reports.html">Reports</a>
+        <a href="report-history.html">History</a>
+        <a href="contact-about.html">Contact</a>
+      </nav>
+      <div class="module-actions">
+        <a class="btn ghost" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="module-content reports-layout">
+      <section class="module-hero">
+        <div>
+          <p class="eyebrow">Care Support</p>
+          <h1>Book a doctor consultation</h1>
+          <p class="lead">Schedule a slot and keep your consultation history in one place.</p>
+        </div>
+      </section>
+
+      <section class="reports-grid">
+        <article class="report-card">
+          <h3>Booking form</h3>
+          <form id="booking-form" class="report-form">
+            <label>Name <input type="text" name="name" required /></label>
+            <label>Email <input type="email" name="email" required /></label>
+            <label>Problem <textarea name="problem" rows="3" required></textarea></label>
+            <label>Date <input type="date" name="date" required /></label>
+            <label>Time <input type="time" name="time" required /></label>
+            <label>
+              Doctor
+              <select name="doctor" required>
+                <option value="">Select Doctor</option>
+                <option>Dr. Sharma</option>
+                <option>Dr. Mehta</option>
+                <option>Dr. Rao</option>
+              </select>
+            </label>
+            <button class="btn primary" type="submit">Confirm Booking</button>
+            <p class="muted" id="booking-status"></p>
+          </form>
+        </article>
+
+        <article class="report-card">
+          <h3>Booking history</h3>
+          <div id="booking-history" class="output-box">
+            <p>No bookings yet.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="booking.js"></script>
+  </body>
+</html>

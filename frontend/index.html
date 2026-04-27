@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuSwastha | Check Your Health Status Instantly</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="logo">SuSwastha</div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="tests.html">Health Tests</a>
+        <a href="reports.html">Reports</a>
+        <a href="report-history.html">History</a>
+        <a href="#about">About</a>
+        <a href="contact-about.html">Contact</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="top-actions">
+        <!-- Dark mode toggle -->
+        <button
+          class="icon-btn"
+          id="theme-toggle"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          🌙
+        </button>
+        <div class="auth-actions">
+          <a class="btn ghost" href="reports.html">Generate Report</a>
+          <a class="btn primary" href="signup.html">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero" data-animate>
+        <div class="hero-text">
+          <p class="eyebrow">Your Digital Health Companion</p>
+          <h1>Check Your Health Status Instantly</h1>
+          <p class="lead">
+            Run AI-assisted screenings for heart health, diabetes, and more
+            within minutes. Track your progress and stay in control.
+          </p>
+          <div class="tip-badge">
+            <span>Daily Tip</span>
+            <p id="health-tip">Hydrate before every fasting test for accurate readings.</p>
+          </div>
+          <div class="hero-actions">
+            <a class="btn primary" href="tests.html">Start Health Check</a>
+            <a class="btn ghost" href="reports.html">Generate Report</a>
+          </div>
+          <button class="chip" id="shuffle-tip">Shuffle tip ↻</button>
+        </div>
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1615461066159-fea0960485d5?q=80&w=1016&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Clinicians reviewing digital health plans together"
+          />
+        </div>
+      </section>
+
+      <section id="tests" class="services" data-animate>
+        <header>
+          <p class="eyebrow">Available Screenings</p>
+          <h2>Comprehensive Health Tests</h2>
+          <p class="section-lead">
+            Quick assessments powered by clinical research to help you detect
+            risks early and make informed lifestyle decisions.
+          </p>
+        </header>
+        <div class="card-grid" id="services-grid"></div>
+      </section>
+
+      <section class="stats-section" data-animate>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <p class="eyebrow">Tests processed</p>
+            <p class="stat-value" data-counter data-target="18452">0</p>
+            <p class="muted">Past 12 months</p>
+          </article>
+          <article class="stat-card">
+            <p class="eyebrow">Accuracy uplift</p>
+            <p class="stat-value" data-counter data-target="94">0%</p>
+            <p class="muted">Validated against hospital data</p>
+          </article>
+          <article class="stat-card">
+            <p class="eyebrow">Lifestyle nudges</p>
+            <p class="stat-value" data-counter data-target="3270">0</p>
+            <p class="muted">Saved inside dashboards</p>
+          </article>
+          <article class="stat-card">
+            <p class="eyebrow">Global clinicians</p>
+            <p class="stat-value" data-counter data-target="152">0</p>
+            <p class="muted">Reviewing reports worldwide</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="module-section" data-animate>
+        <div class="module-text">
+          <p class="eyebrow">Health Tests Module</p>
+          <h2>Enter your metrics. Get instant guidance.</h2>
+          <p>
+            Launch the interactive tests workspace to log vitals, capture lab
+            values, and review personalized recommendations across diabetes,
+            blood pressure, heart health, liver, kidney, thyroid, and more.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="tests.html">Open Health Tests</a>
+            <a class="btn ghost" href="dashboard.html">Review Reports</a>
+          </div>
+        </div>
+        <div class="module-media">
+          <img
+            src="https://images.unsplash.com/photo-1580281658629-67cfbdd246d7?auto=format&fit=crop&w=1400&q=80"
+            alt="Patient entering health metrics on a tablet"
+          />
+        </div>
+      </section>
+
+      <section class="module-section" data-animate>
+        <div class="module-media">
+          <img
+            src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1400&q=80"
+            alt="Patient reviewing health report on laptop"
+          />
+        </div>
+        <div class="module-text">
+          <p class="eyebrow">Reports Module</p>
+          <h2>Share-ready reports & history</h2>
+          <p>
+            Spin up professional summaries, export them to PDF, and dig into
+            your archive of previous tests. Clinician-ready formatting keeps all
+            metrics tidy and timestamped.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="reports.html">Generate a Report</a>
+            <a class="btn ghost" href="report-history.html">View History</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline-section" data-animate>
+        <header>
+          <p class="eyebrow">Live insights</p>
+          <h2>Trending requests in SuSwastha</h2>
+          <p class="muted">
+            Updated every few minutes using anonymized metadata from the reports
+            module.
+          </p>
+        </header>
+        <div class="timeline" id="timeline-feed"></div>
+      </section>
+
+      <section class="callout" data-animate>
+        <p class="eyebrow">Admin Insights</p>
+        <h2>Need an operational view?</h2>
+        <p>
+          The optional admin dashboard helps monitor user onboarding, rotate new
+          ML models, and inspect day-by-day submission volume.
+        </p>
+        <a class="btn primary" href="admin.html">Open Admin Dashboard</a>
+      </section>
+
+      <section id="about" class="about" data-animate>
+        <div class="about-media">
+          <img
+            src="https://media.istockphoto.com/id/1418999473/photo/doctors-comforting-disabled-elderly-patient.jpg?s=612x612&w=0&k=20&c=ggVR5D9U8IY7irIrgvfqSmlLwA7se4vc2fRSAjV2lSs="
+            alt="Doctor offering consultation"
+          />
+        </div>
+        <div class="about-text">
+          <p class="eyebrow">Why SuSwastha</p>
+          <h2>Evidence-based screening and guidance</h2>
+          <p>
+            We combine clinical-grade risk calculators with intuitive visuals so
+            that anyone can monitor their health at home. Our platform keeps
+            your reports securely stored, ready to share with your physician.
+          </p>
+          <ul>
+            <li>Encrypted storage for personal data</li>
+            <li>Contextual explanations for every result</li>
+            <li>Goal tracking to promote healthy habits</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="contact" data-animate>
+        <header>
+          <p class="eyebrow">Get in touch</p>
+          <h2>Questions about your latest report?</h2>
+          <p>Our care guides respond within one business day.</p>
+        </header>
+        <form class="contact-form" data-simple-submit="contact">
+          <div class="form-row">
+            <label>
+              Name
+              <input type="text" placeholder="Full name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" placeholder="you@example.com" required />
+            </label>
+          </div>
+          <label>
+            Message
+            <textarea rows="4" placeholder="Tell us how we can help"></textarea>
+          </label>
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> SuSwastha. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="contact-about.html">Contact</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </footer>
+
+    <!-- Ask SuSwastha floating chat -->
+    <div class="ask-widget">
+      <button class="ask-button" id="ask-toggle">Ask SuSwastha</button>
+      <div class="ask-panel" id="ask-panel">
+        <header class="ask-header">
+          <h3>Ask SuSwastha</h3>
+          <button class="icon-btn" id="ask-close" aria-label="Close">✕</button>
+        </header>
+        <div class="ask-messages" id="ask-messages">
+          <div class="msg msg-bot">
+            Hi! I’m your SuSwastha assistant. Ask general questions about your test
+            panels or how to use the app. For medical emergencies, please contact a doctor.
+          </div>
+        </div>
+        <form class="ask-form" id="ask-form">
+          <input
+            type="text"
+            id="ask-input"
+            placeholder="Type your question..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

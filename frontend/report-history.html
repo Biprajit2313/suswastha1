@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report History | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="module-page">
+    <header class="module-header">
+      <div class="logo">SuSwastha</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tests.html">Health Tests</a>
+        <a href="reports.html">Reports</a>
+        <a href="report-history.html">History</a>
+        <a href="contact-about.html">Contact</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="module-actions">
+        <a class="btn ghost" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="module-content">
+      <section class="module-hero">
+        <div>
+          <p class="eyebrow">Report Archive</p>
+          <h1>Browse your entire test history</h1>
+          <p class="lead">
+            All previously generated summaries, notes, and clinician handoffs
+            live here. Re-open a record anytime to download or keep tracking
+            changes.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="reports.html">Generate New Report</a>
+            <a class="btn ghost" href="#history-table">Jump to History</a>
+          </div>
+        </div>
+        <img
+          src="https://media.istockphoto.com/id/904427708/photo/electronic-medical-record-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=ycijaJOPHpV5B7Yahh1bGx8pHfeOER26Z_UvkLAMiNA="
+          alt="Person browsing report history on tablet"
+        />
+      </section>
+
+      <section id="history-table" class="history-table">
+        <h3>History</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Report</th>
+              <th>Generated</th>
+              <th>Clinician</th>
+              <th>Status</th>
+              <th>Open</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cholesterol Profile</td>
+              <td>Nov 12, 2025</td>
+              <td>Dr. Mehta</td>
+              <td>Reviewed</td>
+              <td><a href="reports.html">View</a></td>
+            </tr>
+            <tr>
+              <td>Liver Function</td>
+              <td>Oct 29, 2025</td>
+              <td>Pending</td>
+              <td>Awaiting upload</td>
+              <td><a href="#">Resume</a></td>
+            </tr>
+            <tr>
+              <td>Kidney Function</td>
+              <td>Oct 10, 2025</td>
+              <td>Dr. Rao</td>
+              <td>Shared</td>
+              <td><a href="#">Open</a></td>
+            </tr>
+            <tr>
+              <td>Diabetes Panel</td>
+              <td>Sep 14, 2025</td>
+              <td>Archived</td>
+              <td>Closed</td>
+              <td><a href="#">Download</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="callout">
+        <p class="eyebrow">Need a note?</p>
+        <p>
+          Open any row to revisit the original report, download the PDF, or add
+          follow-up comments for your physician. Older reports remain archived
+          indefinitely unless you delete them.
+        </p>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+

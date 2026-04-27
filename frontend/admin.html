@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="module-page">
+    <header class="module-header">
+      <div class="logo">SuSwastha</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tests.html">Health Tests</a>
+        <a href="reports.html">Reports</a>
+        <a href="report-history.html">History</a>
+        <a href="contact-about.html">Contact</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="module-actions">
+        <a class="btn ghost" href="dashboard.html">User Dashboard</a>
+        <a class="btn primary" href="login.html">Admin Login</a>
+      </div>
+    </header>
+
+    <main class="module-content admin-layout">
+      <section class="module-hero">
+        <div>
+          <p class="eyebrow">Operations</p>
+          <h1>Manage users, datasets, and ML models</h1>
+          <p class="lead">
+            Track daily submissions, upload refreshed datasets, and monitor the
+            performance of heart, diabetes, and kidney models from a single
+            cockpit.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#admin-grid">View modules</a>
+            <a class="btn ghost" href="reports.html">Download audit logs</a>
+          </div>
+        </div>
+        <img
+          src="https://media.istockphoto.com/id/486359911/photo/hospital-administrator-team.webp?a=1&b=1&s=612x612&w=0&k=20&c=FVgolq2yNHAwJVeDD3YuevEY24mDlVU1kjPbHjEV0hE="
+          alt="Admin analyzing health platform analytics"
+        />
+      </section>
+
+      <section id="admin-grid" class="admin-grid">
+        <article class="admin-card">
+          <p class="eyebrow">Manage users</p>
+          <h3>Access control</h3>
+          <p>
+            View onboarding queue, deactivate inactive accounts, and reset
+            multi-factor tokens.
+          </p>
+          <a class="btn ghost" href="#">Open users</a>
+        </article>
+        <article class="admin-card">
+          <p class="eyebrow">Datasets</p>
+          <h3>Update medical datasets</h3>
+          <p>
+            Upload the latest ILPD, CKD, or Framingham CSVs and refresh features
+            with version control.
+          </p>
+          <a class="btn ghost" href="#">Upload data</a>
+        </article>
+        <article class="admin-card">
+          <p class="eyebrow">ML models</p>
+          <h3>Deploy new models</h3>
+          <p>
+            Drag-and-drop ONNX / TensorFlow exports. Monitor validation accuracy
+            before publishing.
+          </p>
+          <a class="btn ghost" href="#">Upload model</a>
+        </article>
+        <article class="admin-card">
+          <p class="eyebrow">Monitoring</p>
+          <h3>Daily test statistics</h3>
+          <p class="stat-highlight">1,284</p>
+          <p>Tests processed in the last 24h</p>
+          <a class="btn ghost" href="#">See analytics</a>
+        </article>
+      </section>
+
+      <section class="history-table">
+        <h3>Latest activities</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Owner</th>
+              <th>Timestamp</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kidney dataset refresh</td>
+              <td>Raj</td>
+              <td>Nov 22, 2025 • 09:13</td>
+              <td>Completed</td>
+            </tr>
+            <tr>
+              <td>Heart model upload</td>
+              <td>Aisha</td>
+              <td>Nov 21, 2025 • 19:40</td>
+              <td>Pending QA</td>
+            </tr>
+            <tr>
+              <td>User escalations</td>
+              <td>Support</td>
+              <td>Nov 21, 2025 • 17:05</td>
+              <td>In progress</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+

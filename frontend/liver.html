@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liver Disease Checker | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="module-page">
+    <header class="module-header">
+      <div class="logo">SuSwastha</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tests.html">Health Tests</a>
+        <a href="reports.html">Reports</a>
+        <a href="report-history.html">History</a>
+        <a href="contact-about.html">Contact</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="module-actions">
+        <a class="btn ghost" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="test-main">
+      <section class="test-info">
+        <a class="back-link" href="tests.html">← Back to Test Options</a>
+        <p class="eyebrow">Liver Function</p>
+        <h1>Review ILPD markers for liver health</h1>
+        <p>
+          Feed in biochemical markers inspired by the Indian Liver Patient
+          Dataset to estimate probability of liver stress versus healthy
+          functioning.
+        </p>
+        <img
+          src="https://media.istockphoto.com/id/1467241358/photo/doctor-examining-mature-woman-with-ultrasound-scanner-device.jpg?s=1024x1024&w=is&k=20&c=U5L7D9uV0t1E4TdSF2fA4lNoXs_yquPAUxRfRCBmoKw="
+          alt="Doctor analyzing liver reports"
+        />
+      </section>
+      <section class="test-form-card">
+        <h2>Input your values</h2>
+        <form class="test-form">
+          <label>Age <input type="number" placeholder="e.g., 52" /></label>
+          <label>
+            Gender
+            <select>
+              <option>Female</option>
+              <option>Male</option>
+            </select>
+          </label>
+          <label>
+            Total Bilirubin
+            <input type="number" step="0.1" placeholder="e.g., 1.2" />
+          </label>
+          <label>
+            Direct Bilirubin
+            <input type="number" step="0.1" placeholder="e.g., 0.4" />
+          </label>
+          <label>
+            Alkaline Phosphatase
+            <input type="number" placeholder="e.g., 250" />
+          </label>
+          <label>
+            Alanine Aminotransferase (ALT)
+            <input type="number" placeholder="e.g., 35" />
+          </label>
+          <label>
+            Aspartate Aminotransferase (AST)
+            <input type="number" placeholder="e.g., 40" />
+          </label>
+          <label>
+            Total Proteins
+            <input type="number" step="0.1" placeholder="e.g., 6.5" />
+          </label>
+          <label>
+            Albumin
+            <input type="number" step="0.1" placeholder="e.g., 3.5" />
+          </label>
+          <label>
+            Albumin/Globulin Ratio
+            <input type="number" step="0.1" placeholder="e.g., 1.1" />
+          </label>
+          <button type="submit" class="btn primary">Run Prediction</button>
+        </form>
+        <div class="output-box">
+          <h3>Results preview</h3>
+          <p>Liver status: Healthy / Unhealthy</p>
+          <p>Probability: --%</p>
+          <p>Advice: Hydration, avoid alcohol, consult hepatologist if needed.</p>
+        </div>
+      </section>
+    </main>
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+

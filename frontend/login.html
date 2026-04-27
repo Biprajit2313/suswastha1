@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-layout">
+    <section class="auth-visual">
+      <h1>Welcome Back</h1>
+      <p>Review your test history, download reports, and continue screenings.</p>
+      <img
+        src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1400&q=80"
+        alt="Doctor greeting a patient"
+      />
+    </section>
+
+    <section class="auth-panel">
+      <a href="index.html" class="btn ghost">← Back to Home</a>
+      <div>
+        <p class="eyebrow">Secure login</p>
+        <h2>Access your dashboard</h2>
+      </div>
+
+      <!-- ✅ Updated Login Form -->
+      <form id="login-form">
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Password
+          <input type="password" name="password" required />
+        </label>
+
+        <button type="button" class="btn ghost" id="send-login-otp">Send OTP</button>
+
+        <label>
+          Enter OTP
+          <input type="text" name="otp" maxlength="6" inputmode="numeric" required />
+        </label>
+
+        <p class="muted" id="login-error" style="min-height: 20px"></p>
+
+        <div class="form-links">
+          <label>
+            <input type="checkbox" /> Remember me
+          </label>
+          <a href="forgot-password.html">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn primary">Verify OTP & Login</button>
+      </form>
+
+      <p>
+        New to SuSwastha?
+        <a href="signup.html">Create an account</a>
+      </p>
+    </section>
+
+    <!-- ✅ Script for login handling -->
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

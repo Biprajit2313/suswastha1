@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Disease Checker | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="module-page">
+    <header class="module-header">
+      <div class="logo">SuSwastha</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tests.html">Health Tests</a>
+        <a href="reports.html">Reports</a>
+        <a href="report-history.html">History</a>
+        <a href="contact-about.html">Contact</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="module-actions">
+        <a class="btn ghost" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="test-main">
+      <section class="test-info">
+        <a class="back-link" href="tests.html">← Back to Test Options</a>
+        <p class="eyebrow">Cardiac Risk</p>
+        <h1>Leverage Framingham & UCI heart indicators</h1>
+        <p>
+          Combine vitals, cholesterol markers, ECG readings, and exercise data
+          to estimate short-term and long-term cardiovascular risk.
+        </p>
+        <img
+          src="https://media.istockphoto.com/id/1368116005/photo/human-circulatory-system-heart-anatomy.webp?a=1&b=1&s=612x612&w=0&k=20&c=KqfiPhZtYGkT76AEwcEJem74SyTobPtC0EB3fPJUFfo="
+          alt="Cardiologist reviewing ECG"
+        />
+      </section>
+      <section class="test-form-card">
+        <h2>Input your values</h2>
+        <form class="test-form">
+          <label>Age <input type="number" placeholder="e.g., 50" /></label>
+          <label>
+            Sex
+            <select>
+              <option>Female</option>
+              <option>Male</option>
+            </select>
+          </label>
+          <label>
+            Chest Pain Type
+            <select>
+              <option>Typical angina</option>
+              <option>Atypical angina</option>
+              <option>Non-anginal</option>
+              <option>Asymptomatic</option>
+            </select>
+          </label>
+          <label>
+            Resting Blood Pressure
+            <input type="number" placeholder="e.g., 135" />
+          </label>
+          <label>
+            Cholesterol
+            <input type="number" placeholder="e.g., 220" />
+          </label>
+          <label>
+            Fasting Blood Sugar &gt; 120 mg/dL
+            <select>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </label>
+          <label>
+            Resting ECG Result
+            <select>
+              <option>Normal</option>
+              <option>ST-T abnormality</option>
+              <option>Left ventricular hypertrophy</option>
+            </select>
+          </label>
+          <label>
+            Maximum Heart Rate
+            <input type="number" placeholder="e.g., 150" />
+          </label>
+          <label>
+            Exercise-induced Angina
+            <select>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </label>
+          <label>
+            ST Depression (Oldpeak)
+            <input type="number" step="0.1" placeholder="e.g., 1.5" />
+          </label>
+          <label>
+            ST Slope
+            <select>
+              <option>Upsloping</option>
+              <option>Flat</option>
+              <option>Downsloping</option>
+            </select>
+          </label>
+          <label>
+            Number of Major Vessels
+            <input type="number" placeholder="e.g., 1" />
+          </label>
+          <label>
+            Thalassemia Type
+            <select>
+              <option>Normal</option>
+              <option>Fixed defect</option>
+              <option>Reversible defect</option>
+            </select>
+          </label>
+          <button type="submit" class="btn primary">Run Prediction</button>
+        </form>
+        <div class="output-box">
+          <h3>Results preview</h3>
+          <p>Risk level: Low / Medium / High</p>
+          <p>Probability: --%</p>
+          <p>Suggestions: Cardio consult, stress test, nutrition & sleep focus.</p>
+        </div>
+      </section>
+    </main>
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+

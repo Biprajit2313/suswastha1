@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scan Report | SuSwastha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="module-page">
+    <header class="module-header">
+      <div class="logo">SuSwastha</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tests.html">Health Tests</a>
+        <a href="reports.html">Reports</a>
+        <a href="report-history.html">History</a>
+        <a href="contact-about.html">Contact</a>
+      </nav>
+      <div class="module-actions">
+        <a class="btn ghost" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="module-content reports-layout">
+      <section class="module-hero">
+        <div>
+          <p class="eyebrow">Medical OCR</p>
+          <h1>Scan and extract report text</h1>
+          <p class="lead">
+            Use camera or upload an image to extract text from prescriptions and
+            test reports.
+          </p>
+        </div>
+      </section>
+
+      <section class="reports-grid">
+        <article class="report-card">
+          <h3>Capture report</h3>
+          <form id="scan-form" class="report-form">
+            <label>
+              Use Camera / Upload
+              <input id="scan-image" type="file" accept="image/*" capture="environment" required />
+            </label>
+            <button type="submit" class="btn primary">Extract Text</button>
+            <p class="muted" id="scan-status"></p>
+          </form>
+        </article>
+        <article class="report-card">
+          <h3>Extracted text</h3>
+          <textarea id="scan-output" rows="14" placeholder="Extracted OCR text will appear here..."></textarea>
+          <div class="hero-actions" style="margin-top: 12px">
+            <button type="button" class="btn ghost" id="save-scan">Save Report</button>
+            <a href="reports.html" class="btn primary">Continue</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="scan.js"></script>
+  </body>
+</html>

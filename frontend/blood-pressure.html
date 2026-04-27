@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Pressure Checker | SuSwastha</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="module-page">
+
+  <header class="module-header">
+    <div class="logo">SuSwastha</div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tests.html">Health Tests</a>
+      <a href="reports.html">Reports</a>
+      <a href="report-history.html">History</a>
+      <a href="contact-about.html">Contact</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+
+    <div class="module-actions">
+      <a class="btn ghost" href="login.html">Login</a>
+      <a class="btn primary" href="signup.html">Sign Up</a>
+    </div>
+  </header>
+
+  <main class="test-main">
+
+    <!-- LEFT INFO -->
+    <section class="test-info">
+      <a class="back-link" href="tests.html">← Back to Test Options</a>
+      <p class="eyebrow">Hypertension Screening</p>
+
+      <h1>Understand your BP stage and lifestyle risks</h1>
+
+      <p>
+        Combine home BP readings with lifestyle markers to interpret your risk level.
+      </p>
+
+      <img
+        src="https://plus.unsplash.com/premium_photo-1673958771843-12c73b278bd0?w=500"
+        alt="Blood pressure check"
+      />
+    </section>
+
+    <!-- FORM -->
+    <section class="test-form-card">
+      <h2>Input your values</h2>
+
+      <form id="bp-form" class="test-form">
+
+        <label>
+          Systolic BP
+          <input type="number" name="systolic" required />
+        </label>
+
+        <label>
+          Diastolic BP
+          <input type="number" name="diastolic" required />
+        </label>
+
+        <label>
+          Age
+          <input type="number" name="age" required />
+        </label>
+
+        <label>
+          Weight (kg)
+          <input type="number" name="weight" required />
+        </label>
+
+        <label>
+          Height (cm)
+          <input type="number" name="height" required />
+        </label>
+
+        <label>
+          Stress Level
+          <select name="stress">
+            <option value="low">Low</option>
+            <option value="moderate">Moderate</option>
+            <option value="high">High</option>
+          </select>
+        </label>
+
+        <label>
+          Physical Activity
+          <select name="activity">
+            <option value="sedentary">Sedentary</option>
+            <option value="light">Light</option>
+            <option value="moderate">Moderate</option>
+            <option value="intense">Intense</option>
+          </select>
+        </label>
+
+        <label>
+          Smoking
+          <select name="smoking">
+            <option value="no">Non-smoker</option>
+            <option value="former">Former</option>
+            <option value="current">Current</option>
+          </select>
+        </label>
+
+        <label>
+          Alcohol
+          <select name="alcohol">
+            <option value="none">None</option>
+            <option value="occasional">Occasional</option>
+            <option value="weekly">Weekly</option>
+            <option value="daily">Daily</option>
+          </select>
+        </label>
+
+        <button type="submit" class="btn primary">Run Prediction</button>
+      </form>
+
+      <!-- RESULT -->
+      <div class="output-box">
+        <h3>Results</h3>
+        <p id="bp-status">Status: —</p>
+        <p id="bp-risk">Risk: —</p>
+        <p id="bp-advice">Advice: —</p>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- SCRIPTS (ORDER IMPORTANT) -->
+  <script src="config.js"></script>
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
